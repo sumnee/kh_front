@@ -1,28 +1,30 @@
 #container {
-    background-image: url(../images/top.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    width: 650px;
+    padding: 2px;
+    margin: 0 auto;
+}
+#check {
+    width: 640px;
     border: 1px solid #ccc;
-    padding: 10px;
-    margin: 1px auto;      /* auto 중간정렬*/
-    width: 570px;
-    height: 390px;
 }
 
-h2 { color: red;}
-span {color: blue}
-
-table {width: 600px; margin: 5px auto;}
-tr, th {
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-#notice {
-    text-align: center;
-    padding-bottom: 10px;
-}
-#mention {
+h1 {
     color: white;
     background-color: black;
+    font-size: 1em;
+    margin: 0;
+    padding: 10px;
     text-align: left;
 }
+h2 { 
+    color: red; 
+    font-size: 1.5em;
+    text-align: center;
+}
+p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2em;
+}
+span {color: blue}

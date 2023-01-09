@@ -1,0 +1,16 @@
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+#container {
+    width: 550px;
+    border: 1px solid black;
+    padding: 20px 40px;
+    /* 
+    padding : 상하 좌우 
+    padding : 좌 상 우 하
+    */
+}
+li {
+    margin: 10px 0px;
+}
