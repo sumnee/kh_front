@@ -79,6 +79,63 @@
         console.log(0 === "0");
         // === 은 타입도 같아야 true
 
+
+        //숫자
+        var x;
+        x = new Number(30);
+        //x = 30; 와 같음
+        var absVal = Math.abs(-4); 
+        var randVal = Math.random();
+        var floorVal = Math.floor(3.9);
+        var roundVal = Math.round(3.6);
+        var ceilVal = Math.ceil(3.2);
+        console.log(absVal, randVal, floorVal, roundVal, ceilVal);
+
+        //문자열
+        var str = "Hello, JS, world";
+        //str = new String("Hello, JS, world"); 와 같다
+        console.log(str);
+        console.log(str.toUpperCase());
+        console.log("길이구하기 : " + str.length);
+        console.log("인덱스 위치 : " + str.indexOf("l"));
+        console.log("인덱스 위치(뒤에서) : " + str.lastIndexOf("l"));
+        console.log("문자 만들기 : " + str.charAt(0));
+        console.log("문자열 자르기 : " + str.substring(0,6));
+        var strSplitted = str.split(",");
+        console.log("문자열 자르기2 : " + strSplitted[0]+","+strSplitted);
+
+        //형변환
+        var tran1 = 7 + 7;
+        var tran2 = 7 + "7";
+        var tran3 = 7 + 7 + "7";
+        var tran4 = "7" + 7 + 7;
+        var tran5 = "7" + (7 + 7);
+
+        console.log(tran1);
+        console.log(tran2);
+        console.log(tran3);
+        console.log(tran4);
+        console.log(tran5);
+
+        //문자열 -> 숫자
+        //JAVA ) Integer.parseInt(num2);
+        var num1 = 2;
+        var num2 = "3";     //-->그냥 계산하면 23 나옴
+        num2 = Number(num2)
+      //num2 = parseInt(num2) 둘중하나 사용하면댐!
+        var result = num1 + num2;   //-->5나옴
+
+        //숫자 변환 함수의 차이점
+        var numStr1 = "2023년도";
+        var numStr2 = "제2023년도";
+        
+        console.log(Number(numStr1));
+        console.log(Number(numStr2));
+        console.log(parseInt(numStr1));
+        console.log(parseInt(numStr2));
+
+
+        //if문
         var input = 3;
         if(input>2) {
             console.log("2보다 큼!");
@@ -105,6 +162,9 @@
         } else {
             console.log("비어있습니다");
         }
+
+
+        
 
     </script>
 </body>
