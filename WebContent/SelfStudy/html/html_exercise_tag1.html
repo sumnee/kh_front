@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그공부1</title>
+</head>
+<body>
+    <!-- 글자 목록 테이블 멀티미디어 하이퍼링크 -->
+    <!-- 글자 태그 -->
+    <em>EM 글자 기울이기</em> <br>
+    <u>U 글자에 밑줄</u> <br>
+    <s>S 글자에 취소선</s> <br>
+
+    <p>  p로 문단 만들기</p> 
+    <pre>  pre로 문단 만들기 공백,개행 여러번 가능~</pre>
+    <hr>
+    <!-- 목록 태그 -->
+    <h1>설명 목록 태그</h1>
+    <dl>
+        <dt>목록의 제목</dt>
+        <dd>목록에 대한 설명과 내용</dd>
+    </dl>
+    <hr>
+    <!-- 테이블 태그
+
+    <tr> : 표의 행
+    <td> : 표의 열
+    <th> : 표의 제목 셀 -->
+
+    <h1>기본적인 표</h1>
+    <table border="1">
+        <caption>웹 브라우저의 종류</caption>
+        <tr>
+            <th>이름</th>
+            <th>제조사</th>
+        </tr>
+        <tr>
+            <td>크롬</td>
+            <td>google</td>
+        </tr>
+        <tr>
+            <td>사파리</td>
+            <td>apple</td>
+        </tr>
+    </table>
+    <figure>표에 대한 설명 figure</figure>
+
+    <h1>표의 열과 행 합치기</h1>
+    <table border="1">
+        <tr>
+            <td colspan="2">1-1</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2-1</td>
+            <td>2-2</td>
+        </tr>
+        <tr>
+            <td>3-2</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h1>멀티미디어 태그</h1>
+    <img src="../../images/tangerines.jpg" width="500px" alt="귤"> <br>
+    <video src="../../medias/flower.mp4" autoplay muted controls></video> <br>
+    <!-- controls 컨트롤러 제공 -->
+    <audio src="../../medias/spring.mp3" controls></audio>
+    <hr>
+
+    <h1>하이퍼링크 태그</h1>
+    <a href="https://www.iei.or.kr" target="_blank">kh정보교육원</a> <br>
+    <!-- target="_blank" 해야 새탭에서 열림! -->
+    <a href="../../css_exercise/1.selector1.html">내파일</a><br>
+    <a href="../../images/salad.jpg">샐러드</a><br>
+    <a href="../../images/mic.jpg" download="">다운로드</a> <br>
+    <h1>영역 태그</h1>
+</body>
+</html>

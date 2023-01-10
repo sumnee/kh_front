@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그공부2</title>
+    <style>
+        div {
+            border: 1px solid black;
+            background-color: palegoldenrod;
+        }
+        span {
+            border: 1px solid black;
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <!-- 영역 태그 -->
+    <h1>div 태그</h1>
+    <div>div영역</div>
+    <div>공간 단위로 존재</div>
+    <div>블록 속성 요소</div>
+    <div>세로로 추가됨</div>
+
+    <h1>span 태그</h1>
+    <span>span 영역</span>
+    <span>텍스트 단위로 존재</span>
+    <span>인라인 속성 요소</span>
+    <span>가로로 추가</span>
+
+    <h1>iFrame 태그</h1>
+    <iframe src="https://www.iei.or.kr" frameborder="0" width="800px"></iframe><br>
+    <p>보안상의 이유로 잘 안씀</p>
+
+    <hr>
+    <!-- 폼 태그 -->
+    <h1>첫번째 폼</h1>
+    <!-- 데이터를 어떤 곳으로, 어떤 방식으로 보낼지 적어줌 -->
+    <form action="/member/login.do" method="get">
+        ID : <input type="text"><br>
+        PWD : <input type="password"><br>
+        <input type="submit" value="로그인">
+        <input type="reset" value="취소">
+    </form>
+
+    <h1>두번째 폼</h1>
+    <!-- get : url에 입력한 것이 보이게 보냄
+         post : url에 안보이게 보냄 -->
+    <form action="/member/login.do" method="post">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            ID : <input type="text" name="userId"><br>
+            Pw : <input type="password" name="userPW"><br> 
+            <input type="submit" value="로그인">
+            <input type="reset" value="취소">
+        </fieldset>
+    </form>
+
+    <h1>세번째 폼</h1>
+    <form action="">
+        text : <input type="text"> <br>
+        password : <input type="password"> <br>
+        submit : <input type="submit"> <br>
+        reset : <input type="reset"> <br>
+        <hr>
+        checkbox : <input type="checkbox">노랑 <input type="checkbox">파랑 <br>
+        radio : <input type="radio" name="color">노랑 <input type="radio" name="color">파랑 <br>
+        button : <input type="button" value="버튼"> <br>
+
+        <!-- 
+            checkbox 중복선택 가능
+            radio 같은 "name" 내 단일선택만 가능
+            button 그냥 버튼임!
+         --> 
+    <hr>
+        file : <input type="file"> <br>
+        hidden : <input type="hidden"> <br>
+        date : <input type="date"> <br>
+        datetime : <input type="time"> <br>
+        number : <input type="number"> <br>
+        search : <input type="search"> <br>
+        email : <input type="email"> <br>
+        range : <input type="range"> <br>
+        week : <input type="week"> <br>
+        textarea : <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <h1>네번째 폼</h1>
+    <form action="">
+        <fieldset>
+            <legend>음식</legend>
+            <label>
+                <input type="checkbox">피자
+            </label>
+            <!-- label : 박스 아니라 텍스트 선택해도 체크 되도록 -->
+            <input type="checkbox">치킨 
+            <input type="checkbox">떡볶이 
+            <input type="checkbox">튀김 <br>
+            <input type="submit" value="전송">
+        </fieldset>
+    </form>
+    <hr>
+    <h1>다섯번째 폼</h1>
+    <form action="">
+        ID : <input type="text" placeholder="아이디 입력"> <br>
+        Pwd : <input type="text" placeholder="비밀번호 입력" required> <br>
+        <input type="submit" value="전송">
+    </form>
+    <hr>
+
+    <h1>여섯번째 폼</h1>
+    <form action="/member/job.do" method="get">
+        <fieldset>
+            <legend>직업을 선택하세요</legend>
+            <select name="job" id="">
+                <option value="d">의사</option>
+                <option value="j">판사</option>
+                <option value="g">검사</option>
+                <option value="e">강사</option>
+            </select> 
+            <br>
+            <input type="submit" value="전송">
+        </fieldset> 
+        <!-- 제출후 링크에 value 나타남 -->
+    </form>
+    <hr>
+    <form action="">
+        <fieldset>
+            <legend>가장 어려웠던 부분은?</legend>
+            <select name="" id="">
+                <optgroup label="자바">
+                    <option value="">상속</option>
+                    <option value="">캡슐화</option>
+                </optgroup>
+                <optgroup label="오라클">
+                    <option value="">제약조건</option>   
+                    <option value="">SQL</option>  
+                </optgroup>
+            </select>
+        </fieldset>
+    </form>
+    <hr>
+    <form action="">
+        <fieldset>
+            <legend>좋아하는 브라우저를 선택하세요</legend>
+            <input type="text" list="browsers">
+            <datalist id="browsers">
+                <option value="Edge"></option>
+                <option value="Chrome"></option>
+                <option value="Whale"></option>
+                <option value="Safari"></option>
+            </datalist>
+        </fieldset>
+    </form>
+</body>
+</html>
