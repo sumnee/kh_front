@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초실습</title>
+</head>
+<body>
+    <h2>Javascript를 이용한 HTML태그 접근</h2>
+    <p>자바스크립트를 이용하여 HTML태그를 동적으로 처리하기 위해서는 
+        DOM객체의 메소드를 호출하여 접근해야함.
+    </p>
+    <h3>메소드</h3>
+    <p>
+        1. getElementById("아이디명") 
+        : 태그의 id 속성값을 이용해서 태그 요소 객체정보를 가져옴(1개) <br>
+        2. getElementsByName("이름명") : 태그의 name 속성값을 이용해서 태그 요소의 객체 정보를
+        배열에 담아 가져옴(여러개 존재할 수 있음.) <br>
+        3. getElementsByTagName("태그명") : 태그명을 이용해서 태그들의 객체 정보를
+        배열에 담아 가져옴(여러개 존재할 수 있음.) <br>
+    </p>
+    <p id="p11" name="pp">안녕하세요</p>
+    <p id="p22" name="pp">돔객체</p>
+    <p id="p33" name="pp">자바스크립트</p>
+    문제1. div 안에 있는 내용을 "성공" 으로 바꾸어 보세요 <br>
+    (JavaScript로만 바꾸는걸 잊지마세요!)
+    <div id="div1">
+        저를 바꾸어보세요^^
+    </div>
+    <br><br>
+
+    문제2. "바꿀수 있을까? 라는 문구를 "성공" 으로 바꾸어 보세요 <br>
+    <div id="div2">
+        <input type="text" id="test" value="바꿀수 있을까?"/>
+    </div>
+    <br><br>
+
+    문제3. 해당 값을 읽어서 개발자도구 : 콘솔에 출력해보세요
+    <div id="div3">
+        <p id="p1">
+            <span id="span">저를 읽어서 콘솔에 출력해보세요</span>
+        </p>
+    </div>
+    <br><br>
+
+    문제4. 해당 태그의 타입을 변경하여 볼 수 있도록 해보세요(버튼이 없는 문제입니다.)
+    <div id="div4">
+        <input type="hidden" id="test2" value="성공">
+    </div>
+
+    <script>
+        // 문제 1
+        var div1 = document.getElementById("div1");
+        div1.innerHTML = "성공";
+        //재사용 하기위해 변수 div1에 넣은것, 안해도됨
+
+        //문제 2
+        document.querySelector("#test").value = "성공";
+        // input 태그는 value
+
+        //문제 3
+        var spanText = document.querySelector("#span").innerHTML
+        console.log(spanText);
+
+        //문제 4
+        var inputTag = document.querySelector("#test2");
+        inputTag.type = "text";
+
+    </script>
+</body>
+</html>

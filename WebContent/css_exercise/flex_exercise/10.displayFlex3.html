@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display : felx part3</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            border: 1px solid black;
+            display: flex;
+            margin-bottom: 20px;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        .box {
+            background-color: #222;
+            margin: 5px;
+            padding: 5px 45px;
+        }
+        p {
+            color: white;
+            text-align: center;
+        }
+        #opt1 {
+            align-items: flex-start;
+        }
+        #opt2 {
+            align-items: flex-end;
+        }
+        #opt3 {
+            align-items: center;
+        }
+        #opt4 {
+            align-items: baseline;     /* 문자 기준선 맞춰 */
+        }
+        #opt5 {
+            align-items: stretch;      /* 기본값을 늘려 교차축에 가득차게 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="opt1">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p style="font-size: 14px;">2</p>
+        </div>
+        <div class="box">
+            <p style="font-size: 25px;">3</p>
+        </div>
+        <div class="box">
+            <p style="font-size: 10px;">4</p>
+        </div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="box">
+            <p>1</p>
+        </div>
+        <div class="box">
+            <p>2</p>
+        </div>
+        <div class="box">
+            <p>3</p>
+        </div>
+        <div class="box">
+            <p>4</p>
+        </div>
+    </div>
+
+</body>
+</html>
