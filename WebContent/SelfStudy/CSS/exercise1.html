@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <!-- 
+    
+    p가 포함된 태그
+    [class *= p]
+    
+    test로 시작하는 태그
+    [name ^= test]
+    
+    test로 끝나는 태그
+    [class $= test]
+    
+    test로 시작하고 - 를 포함하는 태그
+    [class |= test]
+    
+    띄어쓰기로 구분되어 있는 값 중 test를 포함하는 태그
+    [name ~= test]
+    
+    자손
+    div>ul>li
+    
+    후손
+    div li
+
+    동위선택자
+    기준 미포함, 바로 뒤 여러개 
+    h5~p
+    기준 미포함, 바로 뒤 한개
+    h5+p
+
+    #divtest :first-child
+    #divtest :last-child
+    #divtest :nth-child(2n) / 숫자 선택
+    #divtest :nth-last-child(3) / 뒤에서부터 숫자 선택
+
+    #divtest h4 :first-child (태그 유형이 섞여있을때)
+    #divtest p :last-child (태그 유형이 섞여있을때)
+
+    반응선택자
+    #divtes :active / 클릭한 태그
+    #divtes :hover / 마우스가 올라가있는 태그
+
+    상태선택자
+    [type=text]:focus / 커서가 있는 input태그
+    [type=checkbox]:checked / 체크 상태의 input태그
+
+    속성선택자
+    option:disabled / option태그에서 선택 불가
+    option:enabled  / option태그에서 선택 가능
+
+    링크선택자
+    a:link / 링크 들어가기 전
+    a:visited / 링크 들어간 후
+
+    부정선택자
+    #divtest :not(:last-child) //not 이후에 : 또 적는거 잊지말기~
+
+     -->
+</head>
+<body>
+    <h1>동위선택자</h1>
+    <div>
+        <h4>자손1</h4>
+        <h5>자손2</h5>
+        <p>자손3</p>
+        <p>자손4</p>
+        <p>자손5</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+#container {
+    width: 600px;
+    border: 1px solid black;
+    padding: 30px;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+    line-height: 2;
+}
