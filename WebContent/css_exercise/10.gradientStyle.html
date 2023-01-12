@@ -33,6 +33,47 @@
             background: repeating-linear-gradient(red, red 5%, orange 5%, orange 10%, yellow 10%, yellow 15%, green 15%, green 20%, blue 20%, blue 25%, navy 25%, navy 30%, purple 30%, purple 35%);
             /* 시작점, 끝점 지정해서 색구분을 명확하게 */
         }
+        .circle-gradient {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        #gradient7 {
+            background: radial-gradient(blue, red);
+        }
+        #gradient8 {
+            background: radial-gradient(circle, blue, red);
+        }
+        #gradient9 {
+            background: -webkit-radial-gradient(90% 90%, circle, gold, grey);
+        }
+        /*
+            브라우저 접두어
+            1. -webkit- = Safari, Chrome, Android, iOS
+            2. -moz- = FireFox
+            3. -o- = Opera
+            각 브라우저별로 코딩을 해줘야 했을 때 사용하던것들인데 
+             지금은 브라우저별로 잘 동작하게끔 써주는걸로 사용
+        */
+        #gradient10 {
+            background: radial-gradient(circle closest-side,white,blue,black);
+        }
+        #gradient11 {
+            background: radial-gradient(circle closest-corner,white,blue,black);
+        }
+        #gradient12 {
+            background: radial-gradient(circle farthest-side,white, blue, green);
+        }
+        #gradient13 {
+            background: radial-gradient(circle farthest-corner,white, blue, green);
+        }
+        #gradient14 {
+            background: -webkit-repeating-radial-gradient(white, gold, black 10%);
+        }
+        #gradient15 {
+            background: -webkit-repeating-radial-gradient(white, white 10%, gold, gold 20%, black, black 30%);
+        }
+        
     </style>
 </head>
 <body>
