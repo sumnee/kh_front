@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치도</title>
+    <style>
+        table, td {
+            border: 1px solid #ccc;  
+            border-collapse: collapse;        
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.write("<h1>자리 배치도</h1>");
+        var num = prompt("입장객의 수?")
+        var colnum = prompt("한줄에 몇명?")
+        var rownum = Math.ceil(num/colnum);
+        var count = 1;
+        document.write("<table>");
+        for(var i = 1; i <= rownum; i++) {
+            document.write("<tr>");
+            for(var j = 1; j <= colnum; j++) {
+                if(count > num) break;
+                document.write("<td>"+count+"번 자리</td>");
+                count++;
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+    
+</body>
+</html>
