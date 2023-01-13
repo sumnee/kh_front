@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 실습</title>
+</head>
+<body>
+    <h2>간이 계산기 만들기</h2>
+    첫번째 값 : <input type="text" id="input1"> <br>
+    두번째 값 : <input type="text" id="input2"> <br>
+    <input type="button" value="+" onclick="calculator('+')">
+    <input type="button" value="-" onclick="calculator('-')">
+    <input type="button" value="x" onclick="calculator('*')">
+    <input type="button" value="/" onclick="calculator('/')">
+    <input type="button" value="%" onclick="calculator('%')">
+    <br><br>
+    계산결과 : <span id="result"></span>
+    
+    <script>
+        
+        function calculator(operator) {
+            var input1 = Number(document.querySelector("#input1").value);
+            var input2 = Number(document.querySelector("#input2").value);
+            var spanTag = document.querySelector("#result");
+            var result;
+            switch(operator) {
+                case '+' : result = input1 + input2; break;
+                case '-' : result = input1 - input2; break;
+                case '*' : result = input1 * input2; break;
+                case '/' : result = input1 / input2; break;
+                case '%' : result = input1 % input2; break;
+            }
+            spanTag.innerHTML = result;
+        }
+
+        // 이거 5개해서 하기 -> 번거로우니까 switch문
+        // function calculatePlus() {
+        //     result = Number(input1.value) + Number(input2.value);
+        //     //Number함수 안쓰면 String값으로 가져온다 ex."1"+"3"="13" 출력
+        //     spanTag.innerHTML = result;
+        // }
+
+    </script>
+</body>
+</html>
