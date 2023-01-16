@@ -17,7 +17,7 @@
             height: 50px;
             margin: 10px;
             padding: 10px;
-            /* display: none -> block; */
+            display: none;
         }
     </style>
 </head>
@@ -57,7 +57,26 @@
     </div>
     <script>
         var showDiv = function(val) {
-            console.log(val);
+            var selected = document.querySelector("#"+val);
+            switch(val) {
+                case "title" : 
+                document.querySelector("#titleBox").style.display = "block";
+                document.querySelector("#dateBox").style.display = "none";
+                document.querySelector("#writerBox").style.display = "none";
+                break;
+
+                case "date" : 
+                document.querySelector("#titleBox").style.display = "none";
+                document.querySelector("#dateBox").style.display = "block";
+                document.querySelector("#writerBox").style.display = "none";
+                break;
+
+                case "writer" : 
+                document.querySelector("#titleBox").style.display = "none";
+                document.querySelector("#dateBox").style.display = "none";
+                document.querySelector("#writerBox").style.display = "block";
+                break;
+            }
         }
     </script>
 </body>

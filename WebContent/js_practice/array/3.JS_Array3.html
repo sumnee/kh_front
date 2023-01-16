@@ -26,5 +26,28 @@
             <div style="border:1px solid black; height:100px; width:100px; background-color:yellow;" class="divss" onclick="clickDiv('yellow')" id="yellow" ;></div>
         </div>
     </fieldset><br>
+    <script>
+        var clickArr = [];
+        var index = 0;
+        var str = "";
+        //클릭할때마다 초기화되지 않도록 밖에 뺀다
+        function clickDiv(color) {
+            var selected = document.querySelector("#"+color);
+            clickArr[index] = selected;
+            selected.style.display = "none"; //배열에 저장하고 안보이게
+            index++;
+            if(index == 5) {
+                for(var i=0;i<index;i++) {
+                    clickArr[i].style.display = "block";
+                    str += clickArr[i].outerHTML;
+                    //outerHTML : 배열에 저장된 html코드 꺼내와서 str에 저장
+                }
+                document.querySelector("#div5")
+                .innerHTML = str;
+                index = 0;
+                str = "";
+            }
+        }
+    </script>
 </body>
 </html>
