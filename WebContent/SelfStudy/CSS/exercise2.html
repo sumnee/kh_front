@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배치 스타일</title>
+    <style>
+        /*  
+        relative > normalflow 따르지만 오프셋 적용 가능(위치이동) 
+        absolute > normalflow 따르지 않음
+        static > 기본, normalflow 따르며 오프셋 적용 불가능
+        normalflow > 세로로 쌓아지는 것
+        
+         z-index : 절대적 대소보다는 상대적으로 크면 앞으로 나옴
+        */
+
+        /*
+        display : inline / 인라인 요소로 width, height 속성 무시
+        display : inline-block /인라인 요소, 내용은 블록요소(width, height속성 가능)
+        display : block / 블록요소로 width, height속성 가능
+        */
+        .block {
+            width: 110px;
+            height: 50px;
+            border: 1px solid black;
+            display: inline;
+        }
+        .block2 {
+            width: 110px;
+            height: 50px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .block3 {
+            width: 110px;
+            height: 50px;
+            border: 1px solid black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h3>화면 배치 변경 방법</h3>
+    <pre><b>>> display:inline 테스트</b></pre>
+    <pre>인라인 요소로 변경되면서 width와 height 속성이 무시된다.</pre>
+    <div class="block block-test1 area1">첫번째 영역</div>
+    <div class="block block-test2 area2">두번째 영역</div>
+    <div class="block block-test3 area3">세번째 영역</div>
+    <div class="block block-test4 area4">네번째 영역</div>
+    <div class="block block-test5 area5">다섯번째 영역</div>
+
+    <pre><b>>> display:inline-block 테스트</b></pre>
+    <pre>영역은 인라인 요소로 변경되지만 내용은 블록요소로 지정되어 width와 height속성을 설정할 수 있다.</pre>
+    <div class="block2 block-test1 area1">첫번째 영역</div>
+    <div class="block2 block-test2 area2">두번째 영역</div>
+    <div class="block2 block-test3 area3">세번째 영역</div>
+    <div class="block2 block-test4 area4">네번째 영역</div>
+    <div class="block2 block-test5 area5">다섯번째 영역</div>
+
+    <pre><b>>> display:block 테스트</b></pre>
+    <pre>인라인 요소를 블록요소로 변경하면 width와 height 속성을 설정할 수 있고 블록 요소로 변경할 수 있다. </pre>
+    <span class="block3 area1">첫번째 영역</span>
+    <span class="block3 area2">두번째 영역</span>
+    <span class="block3 area3">세번째 영역</span>
+    <span class="block3 area4">네번째 영역</span>
+    <span class="block3 area5">다섯번째 영역</span>
+</body>
+</html>

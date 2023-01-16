@@ -1,0 +1,73 @@
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+#header {
+    height: 100px;
+}
+    #header-1 {
+        width: 20%;
+        height: 100%;
+        background-color: aquamarine;
+        float: left;
+    }
+    #header-2 {
+        width: 60%;
+        height: 100%;
+        background-color: antiquewhite;
+        float: left;
+    }
+    #header-3 {
+        width: 20%;
+        height: 100%;
+        background-color: aqua;
+        float: left;
+    }
+#navigator {
+    height: 50px;
+    background-color: blanchedalmond;
+}
+#main {
+    height: 600px;
+}
+    #main-1 {
+        width: 30%;
+        height: 100%;
+        float: left;
+        background-color: aquamarine;
+    }
+    #main-2 {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: bisque;
+    }
+    #main-3 {
+        width: 20%;
+        height: 100%;
+        float: left;
+        background-color: floralwhite;
+    }
+    #aside-login {
+        height: 20%;
+        background-color: gray;
+    }
+        table {
+            width: 100%;
+            border: 1px solid black;
+        }
+        #text-area {
+            text-align: center;
+        }
+        #login-btn {
+            width: 90%;
+            height: 90%;
+            padding: 15px;
+        }
+    aside {
+        height: 80%;
+    }
+#footer {
+    height: 100px;
+    background-color: black;
+}
