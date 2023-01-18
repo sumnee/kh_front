@@ -117,19 +117,36 @@
     }
 
     function jsobject6() {
-        var person = new Object();
-        person.name = "하니";
-        person.hobby = "영화보기, 코딩";
-        person.strength = "자바";
-        person.dream = "건강";
-        person.toString = function() {
-            var str = "";
-            for(var keyword in person) {
-                if(keyword != "toString")
+
+        var person = {
+            "name" : "민지",
+            "hobby" : "수영",
+            "strength" : "자바",
+            "dream" : "개발자",
+            "toString" : function() {
+                var str = "";
+                for(var keyword in person) {
+                if(keyword != "toString") {
                 str += keyword + " : " + person[keyword] + "<br>";
+                } 
             }
-            return str;
+                return str;  
+            }
         }
+
+        // var person = new Object();
+        // person.name = "하니";
+        // person.hobby = "영화보기, 코딩";
+        // person.strength = "자바";
+        // person.dream = "건강";
+        // person.toString = function() {
+        //     var str = "";
+        //     for(var keyword in person) {
+        //         if(keyword != "toString")
+        //         str += keyword + " : " + person[keyword] + "<br>";
+        //     }
+        //     return str;
+        
         document.querySelector("#area6").innerHTML
         = person.toString();
 
