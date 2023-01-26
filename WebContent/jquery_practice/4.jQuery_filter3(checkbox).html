@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery filter() 메소드</title>
+    <script src="../js/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" name="check" value="1" /> 1번
+    <input type="checkbox" name="check" value="2" /> 2번
+    <input type="checkbox" name="check" value="3" /> 3번
+    <input type="checkbox" name="check" value="4" /> 4번
+    <br />
+    <input type="button" value="체크 버튼 확인" onclick="checkBtn()" />
+    <br><br>
+    <script>
+        var checkBtn = () => {
+            var checkTags = document.querySelectorAll("[name=check]:checked");
+            checkTags.forEach((el) => {
+                console.log(el.value + "번");
+            })
+
+            // var checkedBoxs = $("[name=check]").filter(":checked");
+            // checkedBoxs.each(function(index,item) {
+            //     console.log(item.value + "번");
+            // })
+
+            // $.each(checkedBoxs, function(index,item) {
+            //     console.log(item.value + "번");
+            // })
+
+            // for(let i=0; i<checkedBoxs.length; i++) {
+            //     console.log(checkedBoxs[i].value + "번");
+            // }
+        }
+        
+    </script>
+<br><br>
+</body>
+</html>
