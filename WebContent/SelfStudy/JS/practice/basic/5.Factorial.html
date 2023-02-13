@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>팩토리얼</title>
+        <style>
+            div, h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>While문을 사용한 팩토리얼 계산</h1>
+        <div id="print"></div>
+        
+        <script>
+            var num = prompt("숫자를 입력하세요", 0);
+            var result = 1;
+            var i = 1;
+            var msg = "";
+            var divTag = document.querySelector("#print");
+
+            if(num != null) {
+                while(i <= num) {
+                    result = result * i;
+                    i++;
+                }
+                msg = num +"! = " + result;
+            } else {
+                msg = "정수를 입력해주세요";
+            }
+            divTag.innerHTML = msg;
+
+        </script>
+    </body>
+</html>

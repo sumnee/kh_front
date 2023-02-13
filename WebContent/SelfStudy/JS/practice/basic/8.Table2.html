@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자리 배치도</title>
+        <style>
+            table, td {
+                border: 1px solid #ccc;  
+                border-collapse: collapse;        
+            }
+            td {
+                padding: 10px;
+                text-align: center;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>자리 배치도</h1>");
+            var num = prompt("배치 할 인원수?");
+            var col = prompt("한줄에 몇명이 앉나요?");
+            var rowNum = Math.ceil(num/col);
+            var count = 1;
+
+            document.write("<table>");
+            for(var i=0;i<rowNum;i++) {
+                document.write("<tr>");
+                for(var j=0;j<col;j++) {
+                    if(count>num) break;
+                    document.write("<td>"+count+"번자리</td>");
+                    count++;
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+
+        </script>
+    </body>
+</html>
