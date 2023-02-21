@@ -9,6 +9,20 @@
     
 </head>
 <body>
+    <script>
+        // append는 자손으로 추가된다. after은 같은 레벨로 추가가 된다.
+        const addFile = () => {
+            // last()를 쓰지 않으면 축적되어 쌓이게된다.(1개증가, 2개증가, 4개증가, 8개증가)그래서 가장 마지막 1개만 추가하기 위해서
+            $("input").last().after("<input type = 'file'>");
+        }
+        const delFile = function() {
+            var inputLength = $("[type=file]").length;
+            if(inputLength > 1) {   // 파일선택버튼이 1개는 꼭 남아있게 만들어줌
+                // 밑에 한줄만 쓰면 삭제버튼 자기자신까지 삭제하게되는 오류 발생
+                $("input").last().remove();
+            }
+        }
+    </script>
     <div>
         <input type="file">
         <input id="add" type="button" value="추가" onclick="addFile();">

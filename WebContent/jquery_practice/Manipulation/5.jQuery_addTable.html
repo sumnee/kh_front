@@ -12,6 +12,20 @@
     </style>
 </head>
 <body>
+    <script>
+        // 버튼을 누르면 밑에 테이블을 추가해주는거 append
+        // let은 var과 비슷하다
+        const add = () => {
+            let title = $("[name=title]").val();
+            let content = $("[name=content]").val();
+            let writer = $("[name=owner]").val();
+            $("table").append("<tr><td>" + title + "</td><td>" + content + "</td><td>" + writer + "</td></tr>")
+            // input칸에 내가 적은 내용이 남아있는걸 없애주기 위해 밑에코드를 작성
+            $("[name=title]").val("");
+            $("[name=content]").val("");
+            $("[name=owner]").val("");
+        }
+    </script>
     제목 : <input type="text" name="title"><br> 
     내용 : <input type="text" name="content"><br>
     작성자 : <input type="text" name="owner"><br>
